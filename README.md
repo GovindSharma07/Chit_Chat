@@ -32,6 +32,6 @@ This Project is Under Proper Licences voilation of any can be lifetime prisonmen
 
 ## Contact
 
-Feel free to reach out to us if you have any questions or suggestions. You can contact the maintainers at [maintainer@example.com](mailto:maintainer@example.com).
+Feel free to reach out to us if you have any questions or suggestions. You can contact the maintainers at GovindSharma97037@gmail.com.
 
 Happy chatting!
