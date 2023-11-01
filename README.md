@@ -19,12 +19,15 @@ Follow these steps to get the app up and running on your local machine.
 
 1. Clone the repository: `git clone https://github.com/GovindSharma07/Chit_Chat`
 2. Navigate to the project directory: `cd your-chat-app`
-3. Install dependencies: `flutter pub get`
-4. Run the app: `flutter run`
+3. Add firebase options using flutterfire CLI
+4. Install dependencies: `flutter pub get`
+5. Run the app: `flutter run`
 
 ## Contributing
 
 We welcome contributions! If you'd like to contribute to the project, please follow our Social Media Account.
+
+## Apk Build link -> https://drive.google.com/file/d/1nt3mp5bq_4cStZgF67Iva7XVYvExxqft/view?usp=sharing
 
 ## License
 This Project is Under Proper Licences voilation of any can be lifetime prisonment.
