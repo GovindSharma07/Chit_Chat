@@ -27,7 +27,7 @@ Follow these steps to get the app up and running on your local machine.
 
 We welcome contributions! If you'd like to contribute to the project, please follow our Social Media Account.
 
-## Apk Build link -> https://drive.google.com/file/d/1nt3mp5bq_4cStZgF67Iva7XVYvExxqft/view?usp=sharing
+## Apk Build link -> https://drive.google.com/file/d/19Tin8d0YYamBgwB4pscxqFWBhKdEc55D/view?usp=drive_link
 
 ## License
 This Project is Under Proper Licences voilation of any can be lifetime prisonment.
