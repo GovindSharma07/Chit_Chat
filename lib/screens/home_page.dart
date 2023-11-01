@@ -6,8 +6,7 @@ import 'package:chit_chat/provider/provider.dart';
 import 'package:chit_chat/screens/user_auth.dart';
 import 'package:chit_chat/widgets/drawer.dart';
 import 'package:chit_chat/widgets/userListTile.dart';
-
-import '../model/user.dart';
+import '../utilits/custom_delegate.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,7 +46,7 @@ class _HomePage extends State<HomePage> {
                 onPressed: () async {
                   showSearch(
                       context: context,
-                      delegate: customDelegate(
+                      delegate: CustomDelegate(
                           await DatabaseFunctions().getAllUsers()));
                 },
                 icon: const Icon(Icons.search)),
@@ -87,80 +86,3 @@ class _HomePage extends State<HomePage> {
   }
 }
 
-class customDelegate extends SearchDelegate {
-  List<Users> allUsers;
-
-  customDelegate(this.allUsers);
-
-  @override
-  List<Widget>? buildActions(BuildContext context) {
-    return [
-      IconButton(
-          onPressed: () {
-            query = "";
-          },
-          icon: const Icon(Icons.clear))
-    ];
-  }
-
-  @override
-  Widget? buildLeading(BuildContext context) {
-    return IconButton(
-        onPressed: () {
-          close(context, null);
-        },
-        icon: const Icon(Icons.keyboard_backspace));
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    if (query.isEmpty) {
-      return ListView.builder(
-        itemCount: allUsers.length,
-        itemBuilder: (context, index) {
-          return UserListTile(allUsers[index], true);
-        },
-      );
-    } else {
-      return ListView.builder(
-        itemCount: allUsers.length,
-        itemBuilder: (context, index) {
-          if (allUsers[index]
-              .name
-              .toLowerCase()
-              .startsWith(query.toLowerCase())) {
-            return UserListTile(allUsers[index], true);
-          } else {
-            return const SizedBox();
-          }
-        },
-      );
-    }
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    if (query.isEmpty) {
-      return ListView.builder(
-        itemCount: allUsers.length,
-        itemBuilder: (context, index) {
-          return UserListTile(allUsers[index], true);
-        },
-      );
-    } else {
-      return ListView.builder(
-        itemCount: allUsers.length,
-        itemBuilder: (context, index) {
-          if (allUsers[index]
-              .name
-              .toLowerCase()
-              .startsWith(query.toLowerCase())) {
-            return UserListTile(allUsers[index], true);
-          } else {
-            return const SizedBox();
-          }
-        },
-      );
-    }
-  }
-}
